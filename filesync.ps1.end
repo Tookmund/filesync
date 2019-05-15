@@ -1,0 +1,7 @@
+'@
+
+$KEYDATA | | $Key
+
+$PSScriptRoot/win/rsync --progress -rvtz -e "$PSScriptRoot/win/ssh -v -i \"$KEY\" -o ProxyCommand=\"$PSScriptRoot/win/ssh -i '$KEY' files@rukey.tookmund.com -p 64 -W '[%h]:%p'\"" $PSScriptRoot files@192.168.86.3:
+
+$Key.Delete()
