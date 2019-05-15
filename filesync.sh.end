@@ -1,0 +1,5 @@
+--ENDKEY--
+
+rsync -rvtz -e "ssh -i "$KEY" -vv -J files@rukey.tookmund.com:64" "$1" files@azaz:
+
+rm -rf "$KEY"
