@@ -1,6 +1,6 @@
 --ENDKEY--
 
 chmod 600 "$KEY"
-rsync -rvtz -e "ssh -v -i \"$KEY\" -o ProxyCommand=\"ssh -i '$KEY' files@rukey.tookmund.com -p 64 -W '[%h]:%p'\"" "$1" files@192.168.86.3:
+rsync -rvtz -e "ssh -v -i \"$KEY\" -o ProxyCommand=\"ssh -i '$KEY' files@rukey.tookmund.com -p 64 -W '[%h]:%p'\"" "$PWD" files@192.168.86.3:
 
 rm -rf "$KEY"
