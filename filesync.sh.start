@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ $# -neq 1 ]
+if [ $# -ne 1 ]
 then
 	echo "Please provide a directory name!"
 	exit 1
