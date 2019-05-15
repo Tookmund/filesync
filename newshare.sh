@@ -8,4 +8,6 @@ fi
 
 ssh-keygen -C "$1" -f "$1" -N ""
 
-cat filesync.sh.start "$1" filesync.sh.end > "$1"-filesync.sh
+FILENAME="$1"-filesync.sh
+cat filesync.sh.start "$1" filesync.sh.end > "$FILENAME"
+chmod +x "$FILENAME"
