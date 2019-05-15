@@ -13,4 +13,3 @@ cat filesync.sh.start "$1" filesync.sh.end > "$FILENAME"
 chmod +x "$FILENAME"
 
 ssh-copy-id -i "$1" files@rukey.tookmund.com
-ssh-copy-id -i "$1" files@azaz
