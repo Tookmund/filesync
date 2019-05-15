@@ -1,5 +1,6 @@
 --ENDKEY--
 
-rsync -rvtz -e "ssh -i "$KEY" -vv -J files@rukey.tookmund.com:64" "$1" files@192.168.86.3:
+chmod 600 "$KEY"
+rsync -rvtz -e "ssh -v -i \"$KEY\" -J files@rukey.tookmund.com:64" "$1" files@192.168.86.3:
 
 rm -rf "$KEY"
