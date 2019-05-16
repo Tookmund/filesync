@@ -1,6 +1,6 @@
 --ENDKEY--
 
 chmod 600 "$KEY"
-rsync --progress -rvtz -e "ssh -v -i \"$KEY\" -p \"$REMPORT\"" "$(dirname "$0")" "$REMUSER"@"$REMHOST":
+rsync --progress --exclude "$(basename "$0")" -rvtz -e "ssh -v -i \"$KEY\" -p \"$REMPORT\"" "$(dirname "$0")" "$REMUSER"@"$REMHOST":
 
 rm -rf "$KEY"
