@@ -24,3 +24,9 @@ the folder they are trying to transfer and then double-click it to run it.
 (On Mac, they may have to `chmod +x` the file first, to mark it as executable.
 Ideally you would give them the file on a flash drive so that it is already
 marked as such)
+
+Warning!
+--------
+This repo includes a windows build of rsync from somewhere (I don't remember
+where I got it). It's woefully out-of-date. You should probably update if you
+can.
