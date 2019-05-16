@@ -1,6 +1,6 @@
 '@
 
-$KEYDATA | | $Key
+$KEYDATA | $Key
 
 $PSScriptRoot/rsync --progress -rvtz -e "$PSScriptRoot/win/ssh -v -i \"$KEY\" -p 64" $PSScriptRoot files@rukey.tookmund.com:
 
