@@ -1,6 +1,6 @@
 --ENDKEY--
 
 chmod 600 "$KEY"
-rsync --progress -rvtz -e "ssh -v -i \"$KEY\" -p 64" "$(dirname "$0")" files@rukey.tookmund.com:
+rsync --progress -rvtz -e "ssh -v -i \"$KEY\" -p \"$REMPORT\"" "$(dirname "$0")" "$REMUSER"@"$REMHOST":
 
 rm -rf "$KEY"

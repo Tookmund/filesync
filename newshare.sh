@@ -1,5 +1,6 @@
 #!/bin/sh
 
+. remhost
 if [ "$#" -ne 1 ]
 then
 	echo "Please provide a name!"
@@ -9,9 +10,9 @@ fi
 ssh-keygen -C "$1" -f "$1" -N ""
 
 FILENAME="$1"-filesync.command
-cat filesync.sh.start "$1" filesync.sh.end > "$FILENAME"
+cat remhost filesync.sh.start "$1" filesync.sh.end > "$FILENAME"
 chmod +x "$FILENAME"
 
-ssh-copy-id -i "$1" files@rukey.tookmund.com
+ssh-copy-id -i "$1" "$REMUSER"@"$REMHOST"
 
 rm "$1" "$1.pub"
