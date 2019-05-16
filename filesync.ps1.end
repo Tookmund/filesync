@@ -2,6 +2,6 @@
 
 $KEYDATA | $Key
 
-$PSScriptRoot/rsync --progress -rvtz -e "$PSScriptRoot/win/ssh -v -i \"$KEY\" -p "$REMPORT"" $PSScriptRoot "$REMUSER"@"$REMHOST":
+$PSScriptRoot/rsync --exclude "$MyInvocation.MyCommand.Name" --exclude 'win/' --progress -rvtz -e "$PSScriptRoot/win/ssh -v -i \"$KEY\" -p "$REMPORT"" $PSScriptRoot "$REMUSER"@"$REMHOST":
 
 $Key.Delete()
